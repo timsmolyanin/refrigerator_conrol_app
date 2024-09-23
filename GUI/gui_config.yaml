@@ -1,0 +1,164 @@
+logging:
+  level: ERROR #DEBUG, INFO, WARN, ERROR, CRITICAL
+
+external_iface:
+  type: 'MQTT'
+  username: 
+  password: ''
+  # ip: '192.168.0.109'
+  ip: 'localhost'
+  port: '1883'
+
+indicators:
+  H1:
+    min_value: 33.3
+    max_value: 66.6
+    unit: ''
+  L1:
+    min_value: 0
+    max_value: 70
+    unit: '%'
+  L2:
+    min_value: 0
+    max_value: 60
+    unit: '%'
+  P1:
+    min_value: 0
+    max_value: 10
+    unit: bar
+  P2:
+    min_value: 0
+    max_value: 10
+    unit: bar
+  P3:
+    min_value: 0
+    max_value: 9
+    unit: bar
+  P4:
+    min_value: 0
+    max_value: 15
+    unit: bar
+  # P5a:
+  #   min_value: 0
+  #   max_value: 15
+  #   unit: bar
+  # P5d:
+  #   min_value: 0
+  #   max_value: 15
+  #   unit: bar
+  P6:
+    min_value: 0
+    max_value: 15
+    unit: bar
+  P7:
+    min_value: 0
+    max_value: 0.8
+    unit: bar
+  P8:
+    min_value: 0
+    max_value: 0.4
+    unit: bar
+  P11:
+    min_value: 0
+    max_value: 10
+    unit: bar
+  P13:
+    min_value: 0
+    max_value: 0.5
+    unit: bar
+  Pvac1:
+    min_value: 2e-10
+    max_value: 2e-1
+    unit: mB
+  Pvac2:
+    min_value: 2e-10
+    max_value: 2e-1
+    unit: mB
+  T1:
+    min_value: 250
+    max_value: 325
+    unit: K
+  T2:
+    min_value: 250
+    max_value: 325
+    unit: K
+  T3:
+    min_value: 5
+    max_value: 325
+    unit: K
+  T4:
+    min_value: 4.2
+    max_value: 325
+    unit: K
+  T5:
+    min_value: 4.2
+    max_value: 325
+    unit: K
+  T6:
+    min_value: 4.2
+    max_value: 325
+    unit: K
+  T7:
+    min_value: 4.2
+    max_value: 325
+    unit: K
+  T8:
+    min_value: 4.2
+    max_value: 325
+    unit: K
+  T9:
+    min_value: 200
+    max_value: 325
+    unit: K
+  T10:
+    min_value: 200
+    max_value: 325
+    unit: K
+  T11:
+    min_value: 250
+    max_value: 325
+    unit: K
+  T12:
+    min_value: 80
+    max_value: 325
+    unit: K
+  T13:
+    min_value: 77
+    max_value: 325
+    unit: K
+  T14:
+    min_value: 100
+    max_value: 325
+    unit: K
+  T15:
+    min_value: 77
+    max_value: 325
+    unit: K
+  T16:
+    min_value: 77
+    max_value: 325
+    unit: K
+  T17:
+    min_value: 4
+    max_value: 6
+    unit: K
+  T18:
+    min_value: 77
+    max_value: 325
+    unit: K
+  Turb1_Freq:
+    min_value: 50
+    max_value: 1000
+    unit: Hz
+  Turb2_Freq:
+    min_value: 50
+    max_value: 1000
+    unit: Hz
+  Turb1_TBearing:
+    min_value: 15
+    max_value: 45
+    unit: C
+  Turb2_TBearing:
+    min_value: 15
+    max_value: 45
+    unit: C

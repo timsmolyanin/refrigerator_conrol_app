@@ -1,0 +1,421 @@
+logging:
+  level: DEBUG #DEBUG, INFO, WARN, ERROR, CRITICAL
+
+connections:
+  external_iface:
+    type: 'MQTT'
+    username: refrig_gui
+    password: '12344321'
+    ip: localhost
+    port: '1883'
+
+  box_serial:
+    port: COM4
+    baudrate: 115200
+
+  therm_serial:
+    ip: 192.168.127.254
+    port: 4001
+
+  turb1_serial:
+    port: COM3
+    baudrate: 19200
+
+  turb2_serial:
+    port: COM5
+    baudrate: 19200
+
+  vac_mqtt:
+    username: ''
+    password: ''
+    ip: localhost
+    port: '1883'
+  
+devices:
+  turb1_sensor_devices:
+    Turb1_TBearing:
+    Turb1_Freq:
+    Turb1_Voltage:
+    Turb1_State:
+
+  turb1_control_devices:
+    Turb1: # necessary
+        converter_type: 'Turbine'
+
+  turb2_sensor_devices:
+    Turb2_TBearing:
+    Turb2_Freq:
+    Turb2_Voltage:
+    Turb2_State:
+
+  turb2_control_devices:
+    Turb2: # necessary
+        converter_type: 'Turbine'
+
+  box_control_devices:
+    V9:
+      modbus_id: 61
+      start_register: 16399
+      num_registers: 2
+      converter_type: 'Valve'
+    V8:
+      modbus_id: 61
+      start_register: 16397
+      num_registers: 2
+      converter_type: 'Valve'
+    V7:
+      modbus_id: 61
+      start_register: 16395
+      num_registers: 2
+      converter_type: 'Valve'
+    V6:
+      modbus_id: 61
+      start_register: 16393
+      num_registers: 2
+      converter_type: 'Valve'
+    V5:
+      modbus_id: 61
+      start_register: 16391
+      num_registers: 2
+      converter_type: 'Valve'
+    V4:
+      modbus_id: 61
+      start_register: 16389
+      num_registers: 2
+      converter_type: 'Valve'
+    V3:
+      modbus_id: 61
+      start_register: 16387
+      num_registers: 2
+      converter_type: 'Valve'
+    V2:
+      modbus_id: 61
+      start_register: 16385
+      num_registers: 2
+      converter_type: 'Valve'
+    V10:
+      modbus_id: 62
+      start_register: 16385
+      num_registers: 2
+      converter_type: 'Valve'
+    V11:
+      modbus_id: 62
+      start_register: 16387
+      num_registers: 2
+      converter_type: 'Valve'
+    V12:
+      modbus_id: 62
+      start_register: 16389
+      num_registers: 2
+      converter_type: 'Valve'
+    V13:
+      modbus_id: 62
+      start_register: 16391
+      num_registers: 2
+      converter_type: 'Valve'
+    V14:
+      modbus_id: 62
+      start_register: 16393
+      num_registers: 2
+      converter_type: 'Valve'
+    V15:
+      modbus_id: 62
+      start_register: 16395
+      num_registers: 2
+      converter_type: 'Valve'
+    V16:
+      modbus_id: 62
+      start_register: 16397
+      num_registers: 2
+      converter_type: 'Valve'
+    V18:
+      modbus_id: 62
+      start_register: 16399
+      num_registers: 2
+      converter_type: 'Valve'
+    Service: # used to call auto valve calibration
+    
+  box_sensor_devices:
+    V2_fb:
+      modbus_id: 61
+      start_register: 4096
+      num_registers: 2
+      converter_type: 'Valve'
+    V3_fb:
+      modbus_id: 61
+      start_register: 4098
+      num_registers: 2
+      converter_type: 'Valve'
+    V4_fb:
+      modbus_id: 61
+      start_register: 4100
+      num_registers: 2
+      converter_type: 'Valve'
+    V5_fb:
+      modbus_id: 61
+      start_register: 4102
+      num_registers: 2
+      converter_type: 'Valve'
+    V6_fb:
+      modbus_id: 61
+      start_register: 4104
+      num_registers: 2
+      converter_type: 'Valve'
+    V7_fb:
+      modbus_id: 61
+      start_register: 4106
+      num_registers: 2
+      converter_type: 'Valve'
+    V8_fb:
+      modbus_id: 61
+      start_register: 4108
+      num_registers: 2
+      converter_type: 'Valve'
+    V9_fb:
+      modbus_id: 61
+      start_register: 4110
+      num_registers: 2
+      converter_type: 'Valve'
+    V10_fb:
+      modbus_id: 62
+      start_register: 4096
+      num_registers: 2
+      converter_type: 'Valve'
+    V11_fb:
+      modbus_id: 62
+      start_register: 4098
+      num_registers: 2
+      converter_type: 'Valve'
+    V12_fb:
+      modbus_id: 62
+      start_register: 4100
+      num_registers: 2
+      converter_type: 'Valve'
+    V13_fb:
+      modbus_id: 62
+      start_register: 4102
+      num_registers: 2
+      converter_type: 'Valve'
+    V14_fb:
+      modbus_id: 62
+      start_register: 4104
+      num_registers: 2
+      converter_type: 'Valve'
+    V15_fb:
+      modbus_id: 62
+      start_register: 4106
+      num_registers: 2
+      converter_type: 'Valve'
+    V16_fb:
+      modbus_id: 62
+      start_register: 4108
+      num_registers: 2
+      converter_type: 'Valve'
+    V18_fb:
+      modbus_id: 62
+      start_register: 4110
+      num_registers: 2
+      converter_type: 'Valve'
+    # H1:
+    #   modbus_id: 30
+    #   start_register: 1
+    #   num_registers: 2
+    L1a:
+      modbus_id: 21
+      start_register: 12312
+      num_registers: 2
+    L1c:
+      modbus_id: 20
+      start_register: 12316
+      num_registers: 2
+    L2a:
+      modbus_id: 21
+      start_register: 12314
+      num_registers: 2
+    L2c:
+      modbus_id: 20
+      start_register: 12318
+      num_registers: 2
+    # L2:
+    #   modbus_id: 30
+    #   start_register: 1
+    #   num_registers: 2
+    P1:
+      modbus_id: 10
+      start_register: 2
+      num_registers: 2
+      converter_type: 'Pressure'
+    P2:
+      modbus_id: 11
+      start_register: 4
+      num_registers: 2
+      converter_type: 'Pressure'
+    P2d:
+      modbus_id: 11
+      start_register: 2
+      num_registers: 2
+      converter_type: 'Pressure'
+    #P2 = P2
+    #P3 = P2 & P2d
+    P4:
+      modbus_id: 12
+      start_register: 2
+      num_registers: 2
+      converter_type: 'Pressure'
+    P5a:
+      modbus_id: 13
+      start_register: 2
+      num_registers: 2
+      converter_type: 'Pressure'
+    P5d:
+      modbus_id: 13
+      start_register: 4
+      num_registers: 2
+      converter_type: 'Pressure'
+    P6:
+      modbus_id: 14
+      start_register: 2
+      num_registers: 2
+      converter_type: 'Pressure'
+    P7:
+      modbus_id: 15
+      start_register: 2
+      num_registers: 2
+      converter_type: 'Pressure'
+    P8:
+      modbus_id: 16
+      start_register: 2
+      num_registers: 2
+      converter_type: 'Pressure'
+    P11:
+      modbus_id: 17
+      start_register: 2
+      num_registers: 2
+      converter_type: 'Pressure'
+    P13:
+      modbus_id: 18
+      start_register: 2
+      num_registers: 2
+      converter_type: 'Pressure'
+    Pvac1:
+      modbus_id: 19
+      start_register: 4098
+      num_registers: 2
+      converter_type: 'Pressure'
+    Pvac2:
+      modbus_id: 19
+      start_register: 4096
+      num_registers: 2
+      converter_type: 'Pressure'
+    T1:
+      modbus_id: 21
+      start_register: 12288
+      num_registers: 2
+    T2:
+      modbus_id: 20
+      start_register: 12288
+      num_registers: 2
+    T10:
+      modbus_id: 21
+      start_register: 12306
+      num_registers: 2
+    T11:
+      modbus_id: 21
+      start_register: 12308
+      num_registers: 2
+
+  therm_sensor_devices:
+    T3:
+      modbus_id: 2
+      start_register: 1000
+      num_registers: 2
+      converter_type: 'SiTemp'
+    T4:
+      modbus_id: 2
+      start_register: 1002
+      num_registers: 2
+      converter_type: 'SiTemp'
+    T5:
+      modbus_id: 2
+      start_register: 1004
+      num_registers: 2
+      converter_type: 'SiTemp'
+    T6:
+      modbus_id: 2
+      start_register: 1006
+      num_registers: 2
+      converter_type: 'SiTemp'
+    T7:
+      modbus_id: 2
+      start_register: 1008
+      num_registers: 2
+      converter_type: 'SiTemp'
+    T8:
+      modbus_id: 2
+      start_register: 1010
+      num_registers: 2
+      converter_type: 'SiTemp'
+    T9:
+      modbus_id: 1
+      start_register: 1000
+      num_registers: 2
+      converter_type: 'SiTemp'
+  #  T10:
+  #    modbus_id: 3
+  #    start_register: 1000
+  #    num_registers: 2
+  #  T11:
+  #    modbus_id: 3
+  #    start_register: 1002
+  #    num_registers: 2
+    T12:
+      modbus_id: 1
+      start_register: 1002
+      num_registers: 2
+      converter_type: 'SiTemp'
+    T13:
+      modbus_id: 1
+      start_register: 1004
+      num_registers: 2
+      converter_type: 'SiTemp'
+    T14:
+      modbus_id: 1
+      start_register: 1006
+      num_registers: 2
+      converter_type: 'SiTemp'
+    T15:
+      modbus_id: 1
+      start_register: 1008
+      num_registers: 2
+      converter_type: 'SiTemp'
+    T16:
+      modbus_id: 1
+      start_register: 1010
+      num_registers: 2
+      converter_type: 'SiTemp'
+    T17:
+      modbus_id: 2
+      start_register: 1012
+      num_registers: 2
+      converter_type: 'SiTemp'
+    T18:
+      modbus_id: 1
+      start_register: 1012
+      num_registers: 2
+      converter_type: 'SiTemp'
+
+  vac_sensor_devices:
+    FPump1_temp:
+    FPump2_temp:
+
+  vac_control_devices:
+    ForVac1:
+    ForVac2:
+    V21:
+    V22:
+
+  multi_devices:
+    L1: ['L1a', 'L1c']
+    L2: ['L2a', 'L2c']
+    H1: ['P5a','P5d','T5']
+    P3: ['P2', 'P2d']
